@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 export default class AddItem extends React.Component {
   constructor(props) {
@@ -42,7 +43,9 @@ export default class AddItem extends React.Component {
     return (
       <div>
         <input type='text' ref='value' />
-        <button onClick={::this.add}>Add</button>
+        <button onClick={::this.add}>
+          <Link to='/'>Add</Link>  
+        </button>
       </div>
     );
   }
