@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class NewVal extends React.Component {
   constructor(props) {
@@ -48,7 +49,9 @@ export default class NewVal extends React.Component {
           {this.state.fList[0].value}
         </span>
         <input type='text' ref='val' />
-        <button onClick={::this.change}>Change</button>
+        <button onClick={::this.change}>
+            <Link to='/'>Change</Link>    
+        </button>
       </div>
     );
   }

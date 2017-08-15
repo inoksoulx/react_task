@@ -23,10 +23,9 @@ export default class AddItem extends React.Component {
     let list = this.state.list;
     let val = ReactDOM.findDOMNode(this.refs.value).value;
     let pattern = /^\S+$/;
-    let now = new Date();
     let newItem = {
       value: val,
-      _id: now.getSeconds()
+      _id: Math.random()
     };
 
     val.length > 0 && pattern.test(val)
